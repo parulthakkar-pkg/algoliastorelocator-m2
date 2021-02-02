@@ -13,6 +13,6 @@ The template module can be installed via [Composer](https://getcomposer.org/):
 
 ```sh
 $ cd /path/to/your/magento2/directory
-$ composer require algolia/algoliasearch-custom-algolia-magento-2
+$ composer require parulthakkar-pkg/algoliastorelocator-magento2
 $ php bin/magento setup:upgrade
 ```
