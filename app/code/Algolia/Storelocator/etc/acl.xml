@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * Copyright © 2021 Neosoft Technologies. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+	<acl>
+		<resources>
+			<resource id="Magento_Backend::admin">
+				<resource id="Algolia_Storelocator::storelocator" sortOrder="10" title="storelocator">
+					<resource id="Algolia_Storelocator::storelocator_save" sortOrder="10" title="Save storelocator"/>
+					<resource id="Algolia_Storelocator::storelocator_delete" sortOrder="20" title="Delete storelocator"/>
+					<resource id="Algolia_Storelocator::storelocator_update" sortOrder="30" title="Update storelocator"/>
+					<resource id="Algolia_Storelocator::storelocator_view" sortOrder="40" title="View storelocator"/>
+				</resource>
+			</resource>
+		</resources>
+	</acl>
+</config>

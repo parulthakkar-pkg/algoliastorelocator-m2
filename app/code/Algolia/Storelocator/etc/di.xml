@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * Copyright © 2021 Neosoft Technologies. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<preference for="Algolia\Storelocator\Api\StorelocatorManagementInterface" type="Algolia\Storelocator\Model\StorelocatorManagement"/>
+	<preference for="Algolia\Storelocator\Api\StorelocatorRepositoryInterface" type="Algolia\Storelocator\Model\StorelocatorRepository"/>
+	<preference for="Algolia\Storelocator\Api\Data\StorelocatorInterface" type="Algolia\Storelocator\Model\Data\Storelocator"/>
+	<preference for="Algolia\Storelocator\Api\Data\StorelocatorSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+
+	<virtualType name="Algolia\Storelocator\Model\ResourceModel\Storelocator\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+		<arguments>
+			<argument name="mainTable" xsi:type="string">algolia_storelocator_storelocator</argument>
+			<argument name="resourceModel" xsi:type="string">Algolia\Storelocator\Model\ResourceModel\Storelocator\Collection</argument>
+		</arguments>
+	</virtualType>
+	<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+		<arguments>
+			<argument name="collections" xsi:type="array">
+				<item name="algolia_storelocator_storelocator_listing_data_source" xsi:type="string">Algolia\Storelocator\Model\ResourceModel\Storelocator\Grid\Collection</item>
+			</argument>
+		</arguments>
+	</type>
+
+<preference for="Algolia\AlgoliaSearch\Helper\Data" type="Algolia\Storelocator\Helper\Data"/>
+<preference for="Algolia\AlgoliaSearch\Model\Source\JobMethods" type="Algolia\Storelocator\Model\Source\JobMethods"/>
+</config>
