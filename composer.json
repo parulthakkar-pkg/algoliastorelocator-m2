@@ -1,5 +1,5 @@
 {
-    "name": "parulthakkar-pkg/algoliastorelocator-magento2",
+    "name": "parulthakkar-pkg/algoliastorelocator-m2",
     "description": "Using Algolia search module for storelocator search",
     "type": "magento2-module",
     "license": ["MIT"],
