@@ -1,0 +1,24 @@
+{
+    "name": "parulthakkar-pkg/algoliastorelocator-magento2",
+    "description": "Using Algolia search module for storelocator search",
+    "type": "magento2-module",
+    "license": ["MIT"],
+    "version": "1.0.0",
+    "require": {
+        "algolia/algoliasearch-magento-2": ">=1.7.0@dev"
+    },
+    "authors": [
+        {
+            "name": "Parul Thakkar",
+            "email": "parulben.thakkar@neosoftmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "files": ["registration.php"],
+        "psr-4": {
+            "Algolia\\Storelocator\\": ""
+        }
+    }
+}
